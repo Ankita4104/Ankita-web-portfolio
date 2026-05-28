@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankita Das | Personal Portfolio</title>
+    <!-- Normal stylesheet linked here -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- EmailJS Client SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Defer loading vanilla script for interactive sections -->
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+
+    <!-- 1. STICKY NAVBAR -->
+    <header id="navbar-header">
+      <div class="container" style="height: 100%;">
+        <nav id="main-navigation" aria-label="Main Navigation">
+          <a href="#home" id="nav-logo" aria-label="Ankita Das Logo Home">
+            <!-- Code icon SVG inline -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal" style="color: var(--accent-color);"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+            Ankita Das
+          </a>
+          
+          <!-- Modern Hambuger menu button -->
+          <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Navigation Links wrapper -->
+          <div id="nav-list-wrapper">
+            <ul id="nav-list">
+              <li><a href="#home" class="nav-link active">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home">
+      <div class="container" style="position: relative;">
+        <span class="num-indicator">01</span>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1>Hi, I'm <br/><span class="text-stroke-art">Ankita Das</span></h1>
+            <p class="hero-subtitle">ECE Student &bull; Frontend Developer &bull; Creative Builder</p>
+            <p class="hero-description">
+              I build responsive and user-focused web experiences using HTML, CSS, JavaScript, Firebase, and modern frontend tools. I enjoy combining design, backend systems, and practical problem-solving to create useful projects.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" id="view-projects-btn">View Projects</a>
+              <a href="#contact" class="btn btn-secondary" id="contact-me-btn">Contact Me</a>
+              <button id="download-resume-btn" class="btn" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); text-decoration: underline; margin-left: 0.5rem; background: none; border: none; padding: 0.5rem;">View Resume</button>
+            </div>
+            
+            <!-- Social integrations under Hero -->
+            <div class="hero-socials">
+              <span class="social-title">Connect with me:</span>
+              <div class="social-links-list">
+                <a href="https://github.com/Ankita4104" target="_blank" class="social-link-item" aria-label="Ankita on GitHub" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                </a>
+               <!-- <a href="https://linkedin.com" target="_blank" class="social-link-item" aria-label="Ankita on LinkedIn" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>-->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dasankita1729@gmail.com" target="_blank" class="social-link-item" aria-label="Ankita via Email">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Hero Side Illustration Container (Anime Coder Pure CSS & SVG Artwork) -->
+          <div class="hero-visual">
+            <div class="floating-circle fc-1"></div>
+            <div class="floating-circle fc-2"></div>
+            
+            <div class="graphic-mockup" id="hero-graphic">
+              <!-- Window top-bar controls -->
+              <div class="mockup-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="mockup-tab">ankita.js</span>
+              </div>
+              <div class="mockup-body">
+                <!-- SVG Anime Coder Flat Illustration
+                <div class="anime-coder-svg-wrapper" style="width: 100%; display: flex; justify-content: center; margin-bottom: 1rem;">
+                  <svg width="200" height="150" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">  -->
+                    <!-- Cozy desk background line -->
+                    <!--<line x1="10" y1="160" x2="230" y2="160" stroke="#E5E5E5" stroke-width="3" stroke-linecap="round"/>
+                     Desk lamp 
+                    <path d="M40 160 L45 120 Q45 100 65 100 L75 100" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M68 93 L82 107" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+                    <polygon points="75,95 85,90 90,105 80,110" fill="#111"/>
+                    <polygon points="85,108 120,135 110,145 75,118" fill="rgba(0,0,0,0.03)"/>
+                    
+                    Anime Coder Character 
+                     Chair backing shadow 
+                    <rect x="110" y="85" width="50" height="75" rx="10" fill="#E5E5E5"/>
+                    <rect x="115" y="145" width="40" height="15" rx="4" fill="#888"/>
+                    
+                     Character Body 
+                    <path d="M120 160 L140 120 L160 160 Z" fill="#111"/> <!-- Smart dark sweater/cozy fit -->
+                     
+                   <div class="anime-coder-svg-wrapper" style="width: 100%; display: flex; justify-content: center; margin-bottom: 1rem;">
+  <img 
+    src="My illustration.png" 
+    alt="Ankita Das" 
+    style="width: 200px; height: 150px; object-fit: contain;"
+  />
+</div>
+                </div>
+                
+                <div>
+                  <p class="code-line"><span class="code-comment">// Academic & Creative Builder</span></p>
+                  <p class="code-line"><span class="code-keyword">const</span> student = {</p>
+                  <p class="code-line">  name: <span class="code-string">"Ankita Das"</span>,</p>
+                  <p class="code-line">  college: <span class="code-string">"NIT Agartala"</span>,</p>
+                  <p class="code-line">  branch: <span class="code-string">"ECE (Electronics & Comm)"</span>,</p>
+                  <p class="code-line">  year: <span class="code-string">"First Year"</span></p>
+                  <p class="code-line">};</p>
+                </div>
+                
+                <div class="visual-component-preview" style="margin-top: 0.5rem; padding: 0.75rem;">
+                  <div class="preview-bar">
+                    <span class="preview-pill active">Developers</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-subtle);">Active Preview</span>
+                  </div>
+                  <div class="preview-skeleton-title"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container" style="position: relative;">
+        <span class="num-indicator">02</span>
+        <div class="section-header">
+          <span class="section-label">Introduction</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>Bridging Electronics & Frontend Systems</h3>
+            <p>
+              I am a first-year Electronics and Communication Engineering (ECE) student at the <strong>National Institute of Technology (NIT) Agartala</strong>. My passion lies in crafting highly interactive, lightweight, and modern web interfaces, combining the precision of electronics with elegant design.
+            </p>
+            <p>
+              Having strong foundations in <strong>HTML, CSS, and vanilla JavaScript</strong>, I build user-focused frontend solutions with seamless backend integration using <strong>Firebase</strong>. Currently, I am expanding my creative toolkit by learning <strong>React.js</strong> and designing custom embedded automation systems with <strong>Arduino and electronics</strong>.
+            </p>
+            <p>
+              I thrive on practical problem-solving, clean visual architecture, and making web platforms intuitive and high-performing.
+            </p>
+          </div>
+
+          <!-- Highlight boxes detailing education and target focus blocks -->
+          <div class="about-highlights">
+            <div class="highlight-box">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Education & Major</h4>
+                <p>B.Tech in Electronics and Communication Engineering (First Year)<br><strong>NIT Agartala</strong></p>
+              </div>
+            </div>
+
+            <div class="highlight-box">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" x2="14" y1="4" y2="20"/></svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Core Interests</h4>
+                <p>Web Development & Design, Firebase Integrations, Arduino & Electronics, Algorithmic Problem Solving.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container" style="position: relative;">
+        <span class="num-indicator">04</span>
+        <div class="section-header">
+          <span class="section-label">My Works</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Card 1: Cafe Gali Chai -->
+          <div class="project-card" id="project-card-cafe">
+            <div class="project-media">
+              <!-- Premium CSS/SVG Art representation for Cafe Gali Chai -->
+              <div class="project-svg-thumb" style="background-color: #FAF4EB;">
+                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#8C6239" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+                  <line x1="6" x2="6" y1="2" y2="4" />
+                  <line x1="10" x2="10" y1="2" y2="4" />
+                  <line x1="14" x2="14" y1="2" y2="4" />
+                  <!-- Warm steam wave -->
+                  <path d="M6 2 Q7 0 8 2" stroke="#8C6239" stroke-width="1" fill="none"/>
+                  <path d="M10 2 Q11 0 12 2" stroke="#8C6239" stroke-width="1" fill="none"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Cafe Gali Chai</h3>
+              <p class="project-desc">
+                A responsive cafe website featuring menu browsing, table booking system, and EmailJS integration for reservation notifications.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">EmailJS</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Ankita4104/cafe-gali" target="_blank" class="project-btn" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                  GitHub
+                </a>
+                <a href="https://cafe-gali-chai.netlify.app/" target="_blank" class="project-btn btn-filled" rel="noopener">
+                  Live Demo
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Campus Student Voice -->
+          <div class="project-card" id="project-card-academic">
+            <div class="project-media">
+              <!-- Premium CSS/SVG Art representation for Campus Student Voice -->
+              <div class="project-svg-thumb" style="background-color: #EBF3FA;">
+                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                  <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
+                  <line x1="12" x2="12" y1="19" y2="22" />
+                  <line x1="8" x2="16" y1="22" y2="22" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Campus Student Voice</h3>
+              <p class="project-desc">
+                A student issue-sharing platform where users can submit concerns that are stored and displayed dynamically using backend database integration.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Ankita4104/campus-student-voice" target="_blank" class="project-btn" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                  GitHub
+                </a>
+                <a href="https://campus-student-voice.netlify.app/" target="_blank" class="project-btn btn-filled" rel="noopener">
+                  Live Demo
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Happy Bro Day -->
+          <div class="project-card" id="project-card-digital">
+            <div class="project-media">
+              <!-- Premium CSS/SVG Art representation for Happy Bro Day -->
+              <div class="project-svg-thumb" style="background-color: #FDF2F8;">
+                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#BE185D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#FDF2F8"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Happy Bro Day</h3>
+              <p class="project-desc">
+                An interactive personalized web experience designed with creative frontend animations and emotional storytelling.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Ankita4104/Brother-s-Day" target="_blank" class="project-btn" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                  GitHub
+                </a>
+                <a href="https://happy-bro-day.netlify.app/" target="_blank" class="project-btn btn-filled" rel="noopener">
+                  Live Demo
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.5 CURRENTLY EXPLORING SECTION -->
+    <section id="exploring" class="section">
+      <div class="container" style="position: relative;">
+        <span class="num-indicator">05</span>
+        <div class="section-header">
+          <span class="section-label">Active Research</span>
+          <h2 class="section-title">Currently Exploring</h2>
+        </div>
+
+        <div class="exploring-grid">
+          
+          <!-- Card A: Anonymous student support -->
+          <div class="exploring-card">
+            <div class="exploring-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Anonymous Student Support Platform</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.5rem;">
+              Designing a secure, anonymous campus support system backended by Firebase real-time systems to let fellow students share emotional guidance and queries anonymously.
+            </p>
+            <span class="tech-tag" style="width: fit-content; margin-top: auto;">Firebase Auth & Store</span>
+          </div>
+
+          <!-- Card B: Senior Roadmap Platform -->
+          <div class="exploring-card">
+            <div class="exploring-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Senior Career Roadmap Platform</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.5rem;">
+              Building an interactive visual roadmap hub aggregating internship prep materials, alumni journey paths, and step-by-step development routes for junior students.
+            </p>
+            <span class="tech-tag" style="width: fit-content; margin-top: auto;">Core JavaScript Map API</span>
+          </div>
+
+          <!-- Card C: Arduino Projects -->
+          <div class="exploring-card">
+            <div class="exploring-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M17 21v-2a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2M6 3h12M12 3v4"/></svg>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Arduino-Based Mini Projects</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.5rem;">
+              Combining ECE hardware knowledge with programming, integrating automated breadboard sensors, simple IoT microcontrollers, and live serial output indicators.
+            </p>
+            <span class="tech-tag" style="width: fit-content; margin-top: auto;">C++ & Embedded Systems</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SKILLS SECTION -->
+    <section id="skills" class="section">
+      <div class="container" style="position: relative;">
+        <span class="num-indicator">03</span>
+        <div class="section-header">
+          <span class="section-label">Capabilities</span>
+          <h2 class="section-title">Core Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Skill: HTML -->
+          <div class="skill-card" id="skill-card-html">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22L2 2h20l-2 20-8 4-8-4z"/><path d="M16 8H8v4h8v4l-4 2-4-2v-2"/></svg>
+            </div>
+            <span class="skill-name">HTML</span>
+          </div>
+
+          <!-- Skill: CSS -->
+          <div class="skill-card" id="skill-card-css">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 2H4v16a6 6 0 0 0 6 6h4a6 6 0 0 0 6-6V2z"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M12 2v22"/></svg>
+            </div>
+            <span class="skill-name">CSS</span>
+          </div>
+
+          <!-- Skill: JavaScript -->
+          <div class="skill-card" id="skill-card-javascript">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2z"/><path d="M16 8v3a3 3 0 0 1-3 3h-1"/><path d="M9 13v1"/></svg>
+            </div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+
+          <!-- Skill: Firebase -->
+          <div class="skill-card" id="skill-card-firebase">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1.5-3-.72-.72-1-1.5-1-2.5 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1-.28 1.78-1 2.5-1 1-1.5 1.62-1.5 3a2.5 2.5 0 0 0 2.5 2.5" />
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+              </svg>
+            </div>
+            <span class="skill-name">Firebase</span>
+          </div>
+
+          <!-- Skill: EmailJS -->
+          <div class="skill-card" id="skill-card-emailjs">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z" />
+                <path d="M22 2 11 13" />
+              </svg>
+            </div>
+            <span class="skill-name">EmailJS</span>
+          </div>
+
+          <!-- Skill: Git & GitHub -->
+          <div class="skill-card" id="skill-card-git">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v3a3 3 0 0 1-3 3H9"/><path d="M6 9v9"/></svg>
+            </div>
+            <span class="skill-name">Git & GitHub</span>
+          </div>
+
+          <!-- Skill: Responsive Design -->
+          <div class="skill-card" id="skill-card-responsive">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            </div>
+            <span class="skill-name">Responsive Design</span>
+          </div>
+
+          <!-- Skill: React.js (Basic) -->
+          <div class="skill-card" id="skill-card-react">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)" />
+                <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(90 12 12)" />
+                <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(150 12 12)" />
+                <circle cx="12" cy="12" r="1.5" />
+              </svg>
+            </div>
+            <span class="skill-name">React (Basic)</span>
+          </div>
+
+          <!-- Skill: Arduino -->
+          <div class="skill-card" id="skill-card-arduino">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2" />
+                <path d="M6 12h4" />
+                <path d="M14 12h4" />
+                <path d="M16 10v4" />
+              </svg>
+            </div>
+            <span class="skill-name">Arduino</span>
+          </div>
+
+          <!-- Skill: C++ -->
+          <div class="skill-card" id="skill-card-cpp">
+            <div class="skill-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 12H15"/><path d="M12 9v6"/></svg>
+            </div>
+            <span class="skill-name">C++</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT SECTION -->
+    <section id="contact" class="section" style="border-bottom: none;">
+      <div class="container" style="position: relative;">
+        <span class="num-indicator">05</span>
+        <div class="section-header">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Detail Cards -->
+          <div class="contact-info">
+            <div class="contact-intro">
+              <p>I would love to connect with you! If you have a project idea, question, or just want to say hi, feel free to fill out the form or reach out directly.</p>
+            </div>
+            
+            <div class="contact-methods">
+              <!-- Method: Email -->
+              <div class="contact-method-card">
+                <div class="contact-method-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z"/><path d="m22 9-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 9"/></svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Email Me</span>
+                  <span class="contact-method-value">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dasankita1729@gmail.com">dasankita1729@gmail.com</a>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Method: GitHub -->
+              <div class="contact-method-card">
+                <div class="contact-method-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Source Code</span>
+                  <span class="contact-method-value">
+                    <a href="https://github.com/Ankita4104" target="_blank" rel="noopener">github.com/Ankita4104</a>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Method: LinkedIn
+              <div class="contact-method-card">
+                <div class="contact-method-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </div>
+                <div class="contact-method-details">
+                  <span class="contact-method-label">Professional Network</span>
+                  <span class="contact-method-value">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/ankita-das</a>
+                  </span>
+                </div>
+              </div>  -->
+            </div>
+          </div>
+
+          <!-- Contact Form Panel -->
+          <div class="contact-form-panel">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="How can I help you?" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" class="form-input" placeholder="Write your message here..." required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary form-submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <!-- Slide-in submit success panel with verification feedback -->
+            <div class="submit-success-panel" id="submit-success-panel">
+              <div class="success-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3 class="success-title">Message Sent!</h3>
+              <p class="success-desc">Thank you for your message. Ankita will review it and get in touch shortly.</p>
+              <button class="btn btn-secondary" id="success-reset-btn" style="margin-top: 1.5rem; padding: 0.6rem 1.2rem; font-size: 0.85rem;">Send another message</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-copyright">
+            &copy; 2026 Ankita Das. All rights reserved. <br />
+            Designed with simplicity &bull; Built with pure HTML, CSS, & JS.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/Ankita4104" target="_blank" class="footer-social-link" aria-label="GitHub Link" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+            </a>
+           <!-- <a href="https://linkedin.com" target="_blank" class="footer-social-link" aria-label="LinkedIn Link" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Interactive Resume Modal Overlay -->
+    <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+      <div class="modal-content">
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+        </button>
+        <h2 class="modal-title" id="resume-title">Academic & Technical Resume</h2>
+        
+        <div class="resume-modal-tabs">
+          
+          <!-- Block: Education -->
+          <div class="resume-block">
+            <h3 class="resume-block-title">Education</h3>
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <span class="resume-item-title">B.Tech in Electronics and Communication Engineering (First Year)</span>
+                <span class="resume-item-date">2025 - Present</span>
+              </div>
+              <p class="resume-item-org">National Institute of Technology (NIT) Agartala</p>
+              <p class="resume-item-desc">Relevant Foundations: Basic Electronics, Network Analysis, Semiconductor Physics, Algorithm logic in C++, Embedded Systems (Arduino).</p>
+            </div>
+          </div>
+
+          <!-- Block: Key Projects -->
+          <div class="resume-block">
+            <h3 class="resume-block-title">Academic Achievements & Projects</h3>
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <span class="resume-item-title">Cafe Gali Chai</span>
+                <span class="resume-item-date">May 2026</span>
+              </div>
+              <p class="resume-item-org">Creative Frontend Development Project</p>
+              <p class="resume-item-desc">Refined and deployed a fully fluid responsive cafe menu and table reservation platform with embedded EmailJS and Firebase backend modules.</p>
+            </div>
+            
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <span class="resume-item-title">Campus Student Voice</span>
+                <span class="resume-item-date">March 2026</span>
+              </div>
+              <p class="resume-item-org">Social Issue-Sharing Digital Portal</p>
+              <p class="resume-item-desc">Integrated real-time database inputs with Firebase Store services, allowing campus students to submit and list platform feedback securely.</p>
+            </div>
+          </div>
+
+          <!-- Block: Tech Competencies -->
+          <div class="resume-block">
+            <h3 class="resume-block-title">Technical Competency Core</h3>
+            <div class="resume-item" style="border-left: none; padding-left: 0;">
+              <p class="resume-item-desc" style="font-size: 0.95rem; line-height: 1.8;">
+                <strong>Programming Languages:</strong> HTML5, CSS3, ES6 core JavaScript, C++, Arduino (C/C++).<br>
+                <strong>Backend & APIs:</strong> Firebase Firestore & Authentication, EmailJS service layers.<br>
+                <strong>Tools & Frameworks:</strong> Git, GitHub, VS Code, Responsive Grids, basic React.js.<br>
+                <strong>Interpersonal & Hardware:</strong> Smart hardware-component prototyping, structured analytical design, team collaboration.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Download Action buttons inside resume -->
+        <div class="resume-footer-actions">
+          <a href="#" onclick="window.print(); return false;" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+            Print Resume
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+          </a>
+         <button onclick="window.print()" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+  Download as PDF
+</button>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
